@@ -1,7 +1,6 @@
-﻿using Domain.Models;
+using JAParkCar.Domain.Models;
 
-namespace Domain.Interfaces;
-
+namespace JAParkCar.Domain.Interfaces;
 public interface ICarSpaceRepository
 {
     Task<CarSpace> GetNumberSpaceAsync(int numberSpace);

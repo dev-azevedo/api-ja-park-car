@@ -1,12 +1,12 @@
-﻿using Domain.Models;
+using JAParkCar.Domain.Models;
 
-namespace Domain.Interfaces;
+namespace JAParkCar.Domain.Interfaces;
 
 public interface ICarRepository
 {
     Task AddCarAsync(Car car);
     Task UpdateCarAsync(Car car);
-    Task DeleteCarAsync(Car car);
+    Task DeleteCarAsync(Guid id);
     Task<List<Car>> GetCarsAsync();
     Task<Car?> GetCarAsync(Guid carId);
     Task<Car?> GetCarPlateAsync(string plate);

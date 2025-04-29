@@ -2,7 +2,7 @@
 using JAParkCar.Application.Mapper;
 using JAParkCar.Application.Services;
 using JAParkCar.Domain.Interfaces;
-using JAParkCar.Infra.Repositories;
+using JAParkCar.Infra.Database.Repositories;
 
 namespace JAParkCar.API.Setup;
 

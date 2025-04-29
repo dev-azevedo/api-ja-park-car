@@ -1,7 +1,7 @@
 ﻿using JAParkCar.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace JAParkCar.Infra.Context;
+namespace JAParkCar.Infra.Database.Context;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
@@ -13,7 +13,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlite("Data Source=D:\\STUDY\\DotNet\\JAParkCar\\Database\\japarkcar.db");
+            var databasePath = Path.Combine(Directory.GetCurrentDirectory(), "..", "japarkcar.sqlite");
+            optionsBuilder.UseSqlite($"Data Source={databasePath}");
         }
     }
 }

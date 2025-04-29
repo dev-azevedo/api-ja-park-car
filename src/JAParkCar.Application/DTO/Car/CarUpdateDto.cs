@@ -7,6 +7,6 @@ public class CarUpdateDto
     public required string Model { get; set; }
     public required string Color { get; set; }
     public required string CarPlate { get; set; }
-    public  bool Active { get; set; } = true;
+    public  bool? Active { get; set; }
     
 }

@@ -1,9 +1,9 @@
 ﻿using JAParkCar.Domain.Interfaces;
 using JAParkCar.Domain.Models;
-using JAParkCar.Infra.Context;
+using JAParkCar.Infra.Database.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace JAParkCar.Infra.Repositories;
+namespace JAParkCar.Infra.Database.Repositories;
 
 public class CarRepository(AppDbContext context) : ICarRepository
 {

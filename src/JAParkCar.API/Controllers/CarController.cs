@@ -29,6 +29,10 @@ namespace JAParkCar.API.Controllers
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetCarAsync(Guid id)
         {
+            if (id == Guid.Empty)
+                return BadRequest("Invalid car id");
+                
+            
             try
             {
                 var car = await _carService.GetCarAsync(id);

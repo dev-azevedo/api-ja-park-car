@@ -9,4 +9,5 @@ public interface ICarService
     Task DeleteCarAsync(Guid id);
     Task<List<CarGetDto>> GetCarsAsync();
     Task<CarGetDto> GetCarAsync(Guid id);
+    Task<CarGetDto> GetCarPlateAsync(string carPlate);
 }

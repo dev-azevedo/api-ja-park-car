@@ -55,4 +55,13 @@ public class CarService(ICarRepository carRepository, IMapper mapper) : ICarServ
         
         return _mapper.Map<CarGetDto>(carOnDb);
     }
+    
+    public async Task<CarGetDto> GetCarPlateAsync(string carPlate)
+    {
+        var carOnDb = await _carRepository.GetCarPlateAsync(carPlate);
+        if (carOnDb is null)
+            throw new Exception("Car not found");
+        
+        return _mapper.Map<CarGetDto>(carOnDb);
+    }
 }

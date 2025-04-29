@@ -10,26 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58094c19-57bd-4220-af13-a642899577d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/JAParkCar.API/Setup/FluentValidationSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Validator/Car/CarCreateValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Validator/Car/CarUpdateValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JAParkCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JAParkCar/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/Controllers/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/Controllers/CarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/JAParkCar.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/JAParkCar.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/Setup/DbSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/Setup/DbSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/Setup/DependencyInjectionSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/Setup/DependencyInjectionSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/cars.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/cars.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/DTO/Car/CarUpdateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/DTO/Car/CarUpdateDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/JAParkCar.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/JAParkCar.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Context/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Context/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Context/AppDbContextFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Context/AppDbContextFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/JAParkCar.Infra.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/JAParkCar.Infra.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Migrations/20250428202958_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Migrations/20250428202958_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Repositories/CarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/CarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/Interfaces/ICarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Interfaces/ICarService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Services/CarService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +121,7 @@
       <updated>1745864190202</updated>
       <workItem from="1745864191541" duration="12000" />
       <workItem from="1745864271725" duration="14323000" />
-      <workItem from="1745946768079" duration="419000" />
+      <workItem from="1745946768079" duration="1533000" />
     </task>
     <servers />
   </component>
@@ -162,13 +146,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/JAParkCar.API/Controllers/CarController.cs</url>
-          <line>48</line>
+          <line>65</line>
           <properties documentPath="D:\STUDY\DotNet\JAParkCar\src\JAParkCar.API\Controllers\CarController.cs" containingFunctionPresentation="Method 'PostCarAsync'">
             <startOffsets>
-              <option value="1322" />
+              <option value="1837" />
             </startOffsets>
             <endOffsets>
-              <option value="1323" />
+              <option value="1838" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

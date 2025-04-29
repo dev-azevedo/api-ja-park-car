@@ -44,6 +44,23 @@ namespace JAParkCar.API.Controllers
             }
         }
 
+        [HttpGet("{carPlate}")]
+        public async Task<IActionResult> GetCarPlateAsync(string carPlate)
+        {
+            try
+            {
+                if (carPlate == string.Empty)
+                    return BadRequest("Invalid car plate");
+                
+                var car = await _carService.GetCarPlateAsync(carPlate);
+                return Ok(car);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
         [HttpPost]
         public async Task<IActionResult> PostCarAsync(CarCreateDto car)
         {

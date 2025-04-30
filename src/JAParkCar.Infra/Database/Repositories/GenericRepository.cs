@@ -7,7 +7,7 @@ namespace JAParkCar.Infra.Database.Repositories;
 
 public class GenericRepository<T>: IGenericRepository<T> where T : BaseModel
 {
-    private readonly AppDbContext _context;
+    protected readonly AppDbContext _context;
     protected readonly DbSet<T> dataset;
 
     public GenericRepository(AppDbContext context)
@@ -16,12 +16,13 @@ public class GenericRepository<T>: IGenericRepository<T> where T : BaseModel
         dataset = _context.Set<T>();
     }
 
-    public virtual async Task<(List<T>, int)> GetAllAsync(int skip, int take)
+    public virtual async Task<(List<T>, int)> GetAllAsync(int skip = 1, int take = 10)
     {
         var totalItems = await dataset.CountAsync();
         var items = await dataset
             .Skip((skip - 1) * take)
             .Take(take)
+            .Where(c => c.IsActive)
             .ToListAsync();
         
         return (items, totalItems);
@@ -29,7 +30,7 @@ public class GenericRepository<T>: IGenericRepository<T> where T : BaseModel
 
     public virtual async Task<T?> GetByIdAsync(Guid id)
     {
-        return await dataset.FirstOrDefaultAsync(c => c.Id == id);
+        return await dataset.FirstOrDefaultAsync(c => c.Id == id && c.IsActive);
     }
 
     public virtual async Task<T> CreateAsync(T entity)

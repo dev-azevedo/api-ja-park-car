@@ -4,10 +4,10 @@ namespace JAParkCar.Application.Interfaces;
 
 public interface ICarService
 {
-    Task RegisterCar(CarCreateDto carDto);
-    Task UpdateCar(CarUpdateDto carDto);
-    Task DeleteCarAsync(Guid id);
-    Task<List<CarGetDto>> GetCarsAsync();
-    Task<CarGetDto> GetCarAsync(Guid id);
-    Task<CarGetDto> GetCarPlateAsync(string carPlate);
+    Task CreateAsync(CarCreateDto carDto);
+    Task UpdateAsync(CarUpdateDto carDto);
+    Task DeleteAsync(Guid id);
+    Task<List<CarGetDto>> GetAllAsync(int skip, int take);
+    Task<CarGetDto> GetByIdAsync(Guid id);
+    Task<CarGetDto> GetByCarPlateAsync(string carPlate);
 }

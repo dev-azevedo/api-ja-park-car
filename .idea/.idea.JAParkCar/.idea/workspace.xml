@@ -10,15 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58094c19-57bd-4220-af13-a642899577d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Interfaces/IGenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/BaseModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/GenericRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JAParkCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JAParkCar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/JAParkCar.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/JAParkCar.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/CarSpace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/CarSpace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Reservation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Reservation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/Controllers/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/Controllers/CarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/JAParkCar.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/JAParkCar.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/Interfaces/ICarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Interfaces/ICarService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Services/CarService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/Interfaces/ICarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Interfaces/ICarRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/CarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/CarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/GenericRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/cars.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/japarkcar.sqlite" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +46,12 @@
     &quot;accountId&quot;: &quot;c453f7b1-284a-4b4a-97f6-639927cd49b6&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5aeb6167299d4cfba30c86624130edbcc90938/1d/3ef0ca46/Object.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -127,11 +134,23 @@
       <workItem from="1745864191541" duration="12000" />
       <workItem from="1745864271725" duration="14323000" />
       <workItem from="1745946768079" duration="2156000" />
-      <workItem from="1746012344593" duration="1374000" />
+      <workItem from="1746012344593" duration="3599000" />
     </task>
     <servers />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -155,10 +174,10 @@
           <line>65</line>
           <properties documentPath="D:\STUDY\DotNet\JAParkCar\src\JAParkCar.API\Controllers\CarController.cs" containingFunctionPresentation="Method 'PostCarAsync'">
             <startOffsets>
-              <option value="1837" />
+              <option value="1899" />
             </startOffsets>
             <endOffsets>
-              <option value="1838" />
+              <option value="1900" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

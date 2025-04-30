@@ -13,11 +13,11 @@ namespace JAParkCar.API.Controllers
         private readonly ICarService _carService = carService;
 
         [HttpGet]
-        public async Task<IActionResult> GetCarsAsync()
+        public async Task<IActionResult> GetAllAsync([FromQuery] int skip = 1, [FromQuery] int take = 10)
         {
             try
             {
-                var cars = await _carService.GetCarsAsync();
+                var cars = await _carService.GetAllAsync(skip, take);
                 return Ok(cars);
             }
             catch (Exception ex)
@@ -27,7 +27,7 @@ namespace JAParkCar.API.Controllers
         }
 
         [HttpGet("{id:guid}")]
-        public async Task<IActionResult> GetCarAsync(Guid id)
+        public async Task<IActionResult> GetByIdAsync(Guid id)
         {
             if (id == Guid.Empty)
                 return BadRequest("Invalid car id");
@@ -35,7 +35,7 @@ namespace JAParkCar.API.Controllers
             
             try
             {
-                var car = await _carService.GetCarAsync(id);
+                var car = await _carService.GetByIdAsync(id);
                 return Ok(car);
             }
             catch (Exception ex)
@@ -45,14 +45,14 @@ namespace JAParkCar.API.Controllers
         }
 
         [HttpGet("{carPlate}")]
-        public async Task<IActionResult> GetCarPlateAsync(string carPlate)
+        public async Task<IActionResult> GetByCarPlateAsync(string carPlate)
         {
             try
             {
                 if (carPlate == string.Empty)
                     return BadRequest("Invalid car plate");
                 
-                var car = await _carService.GetCarPlateAsync(carPlate);
+                var car = await _carService.GetByCarPlateAsync(carPlate);
                 return Ok(car);
             }
             catch (Exception ex)
@@ -62,11 +62,11 @@ namespace JAParkCar.API.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> PostCarAsync(CarCreateDto car)
+        public async Task<IActionResult> PostAsync(CarCreateDto car)
         {
             try
             {
-                await _carService.RegisterCar(car);
+                await _carService.CreateAsync(car);
                 return Created();
             }
             catch (Exception ex)
@@ -75,12 +75,12 @@ namespace JAParkCar.API.Controllers
             }
         }
 
-        [HttpPut("{id:guid}")]
-        public async Task<IActionResult> PutCarAsync(CarUpdateDto car)
+        [HttpPut]
+        public async Task<IActionResult> PutAsync(CarUpdateDto car)
         {
             try
             {
-                await _carService.UpdateCar(car);
+                await _carService.UpdateAsync(car);
                 return NoContent();
             }
             catch (Exception ex)
@@ -94,7 +94,7 @@ namespace JAParkCar.API.Controllers
         {
             try
             {
-                await _carService.DeleteCarAsync(id);
+                await _carService.DeleteAsync(id);
                 return NoContent();
             }
             catch (Exception ex)

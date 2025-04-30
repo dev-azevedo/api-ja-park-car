@@ -12,56 +12,64 @@ public class CarService(ICarRepository carRepository, IMapper mapper) : ICarServ
     private readonly ICarRepository _carRepository = carRepository;
     private readonly IMapper _mapper = mapper;
 
-    public async Task RegisterCar(CarCreateDto carDto)
+    public async Task CreateAsync(CarCreateDto carDto)
     {
         var carOnDb = await _carRepository.GetCarPlateAsync(carDto.CarPlate);
         if(carOnDb is not null)
             throw new Exception("Car already registered");
         
         var car = _mapper.Map<Car>(carDto);
-        await _carRepository.AddCarAsync(car);
+        await _carRepository.CreateAsync(car);
     }
 
-    public async Task UpdateCar(CarUpdateDto carDto)
+    public async Task UpdateAsync(CarUpdateDto carDto)
     {
-        var carOnDb = await _carRepository.GetCarAsync(carDto.Id);
+        var carOnDb = await _carRepository.GetByIdAsync(carDto.Id);
         if (carOnDb is null)
             throw new Exception("Car not found");
         
-        var car = _mapper.Map<Car>(carDto);
-        await _carRepository.UpdateCarAsync(car);
-    }
-
-    public async Task DeleteCarAsync(Guid id)
-    {
-        var carOnDb = await _carRepository.GetCarAsync(id);
-        if (carOnDb is null)
-            throw new Exception("Car not found");
+        carOnDb.Brand = carDto.Brand;
+        carOnDb.Model = carDto.Model;
+        carOnDb.Color = carDto.Color;
+        carOnDb.CarPlate = carDto.CarPlate;
+        carOnDb.UpdatedAt = DateTime.Now;
         
-        await _carRepository.DeleteCarAsync(id);
+        await _carRepository.UpdateAsync(carOnDb);
     }
 
-    public async Task<List<CarGetDto>> GetCarsAsync()
+    public async Task<List<CarGetDto>> GetAllAsync(int skip, int take)
     {
-        var carsOnDb = await _carRepository.GetCarsAsync();
-        return _mapper.Map<List<CarGetDto>>(carsOnDb);
+        var (items, totalItem) = await _carRepository.GetAllAsync(skip, take);
+        return _mapper.Map<List<CarGetDto>>(items);
     }
 
-    public async Task<CarGetDto> GetCarAsync(Guid id)
+    public async Task<CarGetDto> GetByIdAsync(Guid id)
     {
-        var carOnDb = await _carRepository.GetCarAsync(id);
+        var carOnDb = await _carRepository.GetByIdAsync(id);
         if (carOnDb is null)
             throw new Exception("Car not found");
         
         return _mapper.Map<CarGetDto>(carOnDb);
     }
     
-    public async Task<CarGetDto> GetCarPlateAsync(string carPlate)
+    public async Task<CarGetDto> GetByCarPlateAsync(string carPlate)
     {
         var carOnDb = await _carRepository.GetCarPlateAsync(carPlate);
         if (carOnDb is null)
             throw new Exception("Car not found");
         
         return _mapper.Map<CarGetDto>(carOnDb);
+    }
+    
+    public async Task DeleteAsync(Guid id)
+    {
+        var carOnDb = await _carRepository.GetByIdAsync(id);
+        if (carOnDb is null)
+            throw new Exception("Car not found");
+        
+        carOnDb.IsActive = false;
+        carOnDb.UpdatedAt = DateTime.Now;
+        
+        await _carRepository.UpdateAsync(carOnDb);
     }
 }

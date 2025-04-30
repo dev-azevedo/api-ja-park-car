@@ -16,7 +16,7 @@ public class CarRepository(AppDbContext context) : ICarRepository
 
     public async Task UpdateCarAsync(Car car)
     {
-        var carOnDb = await _context.Cars.FirstOrDefaultAsync(c => c.Id == car.Id && c.Active);
+        var carOnDb = await _context.Cars.FirstOrDefaultAsync(c => c.Id == car.Id && c.IsActive);
         if (carOnDb is null)
             throw new Exception("Car not found");
 
@@ -30,28 +30,28 @@ public class CarRepository(AppDbContext context) : ICarRepository
 
     public async Task DeleteCarAsync(Guid id)
     {
-        var carOnDb = await _context.Cars.FirstOrDefaultAsync(c => c.Id == id && c.Active);
+        var carOnDb = await _context.Cars.FirstOrDefaultAsync(c => c.Id == id && c.IsActive);
         if (carOnDb is null)
             throw new Exception("Car not found");
         
-        carOnDb.Active = false;
+        carOnDb.IsActive = false;
         await _context.SaveChangesAsync();
     }
 
     public async Task<List<Car>> GetCarsAsync()
     {
-       var cars = await _context.Cars.Where(c => c.Active).ToListAsync();
+       var cars = await _context.Cars.Where(c => c.IsActive).ToListAsync();
        return cars;
     }
     public Task<Car?> GetCarAsync(Guid carId)
     {
-        var car = _context.Cars.FirstOrDefaultAsync(c => c.Id == carId && c.Active);
+        var car = _context.Cars.FirstOrDefaultAsync(c => c.Id == carId && c.IsActive);
         return car;
     }
 
     public Task<Car?> GetCarPlateAsync(string plate)
     {
-        var carOnDb = _context.Cars.FirstOrDefaultAsync(c => c.CarPlate == plate && c.Active);
+        var carOnDb = _context.Cars.FirstOrDefaultAsync(c => c.CarPlate == plate && c.IsActive);
         return carOnDb;
     }
 }

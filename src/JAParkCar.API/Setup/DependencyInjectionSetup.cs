@@ -18,6 +18,7 @@ public static class DependencyInjectionSetup
     private static void AddRepositories(this IServiceCollection services)
     {
         services.AddScoped<ICarRepository, CarRepository>();
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
     }
 
     private static void AddServices(this IServiceCollection services)

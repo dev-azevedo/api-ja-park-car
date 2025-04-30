@@ -10,10 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58094c19-57bd-4220-af13-a642899577d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Interfaces/IGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/BaseModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/GenericRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JAParkCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JAParkCar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.API/Controllers/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.API/Controllers/CarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/Interfaces/ICarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Interfaces/ICarService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Application/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Application/Services/CarService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/JAParkCar.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/JAParkCar.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/CarSpace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/CarSpace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Reservation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Domain/Models/Reservation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/CarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAParkCar.Infra/Database/Repositories/CarRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +55,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.JAParkCar.API: IIS Express.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.JAParkCar.API: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.JAParkCar.API: IIS Express">
     <configuration name="JAParkCar.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/JAParkCar.API/JAParkCar.API.csproj" />
@@ -121,7 +126,8 @@
       <updated>1745864190202</updated>
       <workItem from="1745864191541" duration="12000" />
       <workItem from="1745864271725" duration="14323000" />
-      <workItem from="1745946768079" duration="1533000" />
+      <workItem from="1745946768079" duration="2156000" />
+      <workItem from="1746012344593" duration="1374000" />
     </task>
     <servers />
   </component>
